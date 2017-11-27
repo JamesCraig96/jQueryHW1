@@ -3,6 +3,11 @@
 <head>
   <title>jQuery test page</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <style>
+  .yellow {
+    color: yellow;
+  }
+  </style>
 </head>
 <body>
   <h1>Lorem ipsum</h1>
@@ -31,6 +36,18 @@
     var h2 = From Wikipedia, the free encyclopedia;
     $("h1").text(h2);
     $("h2").text(h1);
+  }
+  function subHed() {
+    $("h2, h3").fadeOut();
+  }
+  function undo() {
+    $("h1, h3").show();
+  }
+  function highlightByline() {
+    $(".byline").addClass(".yellow");
+  }
+  function unHighlightByline() {
+    $(".byline").removeClass(".yellow");
   }
   </script>
 </body>
